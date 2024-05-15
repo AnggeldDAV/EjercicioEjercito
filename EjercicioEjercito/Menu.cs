@@ -139,7 +139,6 @@ namespace EjercicioEjercito
                             Console.WriteLine("Elegiste la opcion 2\n");
                             ListaElementos();
                             break;
-                        default: Console.WriteLine("No has elegido ninguna de las opciones propuestas"); break;
                     }
                     DameMensajes();
                     Int32.TryParse(Console.ReadLine(), out Opcion);
