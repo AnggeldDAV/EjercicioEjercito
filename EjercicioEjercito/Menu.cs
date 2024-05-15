@@ -18,7 +18,7 @@ namespace EjercicioEjercito
         public decimal Precio;
         public void DameMensajes()
         {
-            Console.WriteLine($"Pulsa 1  Si quieres agregar un nuevo elemento \n" +
+            Console.WriteLine($"Pulsa 1 Si quieres agregar un nuevo elemento \n" +
                 $"Pulsa 2 Si quieres listar todos los elementos \n \n");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Si Pulsas otra tecla se cerrara el programa");
@@ -30,7 +30,6 @@ namespace EjercicioEjercito
             Tipo = Console.ReadLine().ToLower();
             if (Tipo == "caballeria" | Tipo == "infanteria" | Tipo == "artilleria")
             {
-                Console.WriteLine(Tipo);
                 return Tipo;
             } else
             {
@@ -109,7 +108,10 @@ namespace EjercicioEjercito
                 case "artilleria": Elemento = Fabrica.Unidad(TiposMilitares.Artilleria, Velocidad, Blindaje, PotenciaFuego, Precio); break;
             }
             Ejer.Add(Elemento);
-            Console.WriteLine($"\nElemento añadido: {Elemento}\n");
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Elemento añadido: {Elemento}\n");
+            Console.ForegroundColor = ConsoleColor.White;
         }
         public void ListaElementos()
         {
@@ -127,13 +129,13 @@ namespace EjercicioEjercito
                     switch (Opcion)
                     {
                         case 1:
-                            Console.WriteLine($"\n Elegiste la opcion 1");
                             Console.Clear();
+                            Console.WriteLine($"Elegiste la opcion 1\n");
                             CreaElemento();
                             break;
                         case 2:
-                            Console.WriteLine("Elegiste la opcion 2");
                             Console.Clear();
+                            Console.WriteLine("Elegiste la opcion 2\n");
                             ListaElementos();
                             break;
                         default: Console.WriteLine("No has elegido ninguna de las opciones propuestas"); break;
