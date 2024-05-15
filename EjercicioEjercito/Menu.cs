@@ -70,7 +70,9 @@ namespace EjercicioEjercito
             }
             catch
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("\nDebe ser un numero");
+                Console.ForegroundColor = ConsoleColor.White;
                 EligeVelocidad();
             }
             try
@@ -79,7 +81,9 @@ namespace EjercicioEjercito
             }
             catch
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("\nDebe ser un numero");
+                Console.ForegroundColor = ConsoleColor.White;
                 EligeBlindaje();
             }
             try
@@ -88,7 +92,9 @@ namespace EjercicioEjercito
             }
             catch
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("\nDebe ser un numero");
+                Console.ForegroundColor = ConsoleColor.White;
                 EligePotenciaFuego();
             }
             try
@@ -97,7 +103,9 @@ namespace EjercicioEjercito
             }
             catch
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("\nDebe ser un numero");
+                Console.ForegroundColor = ConsoleColor.White;
                 EligePrecio();
             }
             switch (Tipo)
@@ -139,16 +147,18 @@ namespace EjercicioEjercito
                             Console.WriteLine("Elegiste la opcion 2\n");
                             ListaElementos();
                             break;
-                    }
+                   }
                     DameMensajes();
                     Int32.TryParse(Console.ReadLine(), out Opcion);
                 }
+                
                 Console.WriteLine("Cerrando el programa");
             }
             else
             {
-                Console.Clear();
+                Console.ForegroundColor= ConsoleColor.Red;
                 Console.WriteLine("La opcion debe ser un numero \n");
+                Console.ForegroundColor = ConsoleColor.White;
                 DameMenu();
             }
             
