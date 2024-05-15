@@ -68,37 +68,36 @@ namespace EjercicioEjercito
             {
                 EligeVelocidad();
             }
-            catch (Exception exc)
-
+            catch
             {
-                Console.WriteLine("Debe ser un numero");
+                Console.WriteLine("\nDebe ser un numero");
                 EligeVelocidad();
             }
             try
             {
                 EligeBlindaje();
             }
-            catch (Exception exc)
+            catch
             {
-                Console.WriteLine("Debe ser un numero");
+                Console.WriteLine("\nDebe ser un numero");
                 EligeBlindaje();
             }
             try
             {
                 EligePotenciaFuego();
             }
-            catch(Exception exc)
+            catch
             {
-                Console.WriteLine("Debe ser un numero");
+                Console.WriteLine("\nDebe ser un numero");
                 EligePotenciaFuego();
             }
             try
             {
                 EligePrecio();
             }
-            catch (Exception exc)
+            catch
             {
-                Console.WriteLine("Debe ser un numero");
+                Console.WriteLine("\nDebe ser un numero");
                 EligePrecio();
             }
             switch (Tipo)
@@ -115,7 +114,9 @@ namespace EjercicioEjercito
         }
         public void ListaElementos()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine($"Total elementos: {Ejer.TotalElementos}, Potencia de fuego total: {Ejer.PotenciaFuegoTotal()}, Blindaje total: {Ejer.BlindajeTotal()}, Capacidad de movimiento: {Ejer.VelocidadTotal()}, Gastos: {Ejer.GastoTotal()}, Capacidad Militar: {Ejer.CapacidadMilitarTotal()}\n");
+            Console.ForegroundColor = ConsoleColor.White;
         }
         public void DameMenu()
         {
