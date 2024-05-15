@@ -10,7 +10,7 @@ namespace EjercicioEjercito
     {
         public IFactory Fabrica = new Fabrica01();
         public IColeccionable Ejer = new Ejercito();
-        public IDefensable elemento;
+        public IDefensable Elemento;
         public string Tipo;
         public double Velocidad;
         public double Blindaje;
@@ -104,12 +104,12 @@ namespace EjercicioEjercito
             }
             switch (Tipo)
             {
-                case "caballeria": elemento = Fabrica.Unidad(TiposMilitares.Caballeria, Velocidad, Blindaje, PotenciaFuego, Precio); break;
-                case "infanteria": elemento = Fabrica.Unidad(TiposMilitares.Infateria, Velocidad, Blindaje, PotenciaFuego, Precio); break;
-                case "artilleria": elemento = Fabrica.Unidad(TiposMilitares.Artilleria, Velocidad, Blindaje, PotenciaFuego, Precio); break;
+                case "caballeria": Elemento = Fabrica.Unidad(TiposMilitares.Caballeria, Velocidad, Blindaje, PotenciaFuego, Precio); break;
+                case "infanteria": Elemento = Fabrica.Unidad(TiposMilitares.Infateria, Velocidad, Blindaje, PotenciaFuego, Precio); break;
+                case "artilleria": Elemento = Fabrica.Unidad(TiposMilitares.Artilleria, Velocidad, Blindaje, PotenciaFuego, Precio); break;
             }
-            Ejer.Add(elemento);
-            Console.WriteLine($"\nElemento añadido: {elemento}\n");
+            Ejer.Add(Elemento);
+            Console.WriteLine($"\nElemento añadido: {Elemento}\n");
         }
         public void ListaElementos()
         {
