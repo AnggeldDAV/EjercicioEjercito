@@ -18,15 +18,15 @@ namespace EjercicioEjercito
         public decimal Precio;
         public void DameMensajes()
         {
-            Console.WriteLine($"Pulsa 1 Si quieres agregar un nuevo elemento \n" +
-                $"Pulsa 2 Si quieres listar todos los elementos \n \n");
+            Console.WriteLine("Pulsa 1 Si quieres agregar un nuevo elemento \n" +
+                "Pulsa 2 Si quieres listar todos los elementos \n \n");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Si Pulsas otra tecla se cerrara el programa");
+            Console.WriteLine("Si Pulsas otro numero se cerrara el programa");
             Console.ForegroundColor = ConsoleColor.White;
         }
         public string EligeTipo()
         {
-            Console.WriteLine($"Elige uno de estos tipos: Caballeria, Infanteria o Artilleria ");
+            Console.WriteLine("Elige uno de estos tipos: Caballeria, Infanteria o Artilleria ");
             Tipo = Console.ReadLine().ToLower();
             if (Tipo == "caballeria" | Tipo == "infanteria" | Tipo == "artilleria")
             {
@@ -39,25 +39,25 @@ namespace EjercicioEjercito
         }
         public double EligeVelocidad()
         {
-            Console.WriteLine($"\nDime la velocidad: ");
+            Console.WriteLine("\nDime la velocidad: ");
             Velocidad = double.Parse(Console.ReadLine());
             return Velocidad;
         }
         public double EligeBlindaje()
         {
-            Console.WriteLine($"\nDime el blindaje: ");
+            Console.WriteLine("\nDime el blindaje: ");
             Blindaje = double.Parse(Console.ReadLine());
             return Blindaje;
         }
         public double EligePotenciaFuego()
         {
-            Console.WriteLine($"\nDime la potencia de fuego");
+            Console.WriteLine("\nDime la potencia de fuego");
             PotenciaFuego = double.Parse(Console.ReadLine());
             return PotenciaFuego;
         }
         public decimal EligePrecio()
         {
-            Console.WriteLine($"\nDime su precio: ");
+            Console.WriteLine("\nDime su precio: ");
             Precio = decimal.Parse(Console.ReadLine());
             return Precio;
         }
@@ -89,7 +89,7 @@ namespace EjercicioEjercito
             }
             catch(Exception exc)
             {
-                Console.WriteLine($"Debe ser un numero");
+                Console.WriteLine("Debe ser un numero");
                 EligePotenciaFuego();
             }
             try
@@ -130,7 +130,7 @@ namespace EjercicioEjercito
                     {
                         case 1:
                             Console.Clear();
-                            Console.WriteLine($"Elegiste la opcion 1\n");
+                            Console.WriteLine("Elegiste la opcion 1\n");
                             CreaElemento();
                             break;
                         case 2:
@@ -143,12 +143,15 @@ namespace EjercicioEjercito
                     DameMensajes();
                     Int32.TryParse(Console.ReadLine(), out Opcion);
                 }
+                Console.WriteLine("Cerrando el programa");
             }
             else
             {
-                Console.WriteLine("La opcion debe ser un numero");
+                Console.Clear();
+                Console.WriteLine("La opcion debe ser un numero \n");
+                DameMenu();
             }
-            Console.WriteLine("Cerrando el programa");
+            
         }
     }
 }
