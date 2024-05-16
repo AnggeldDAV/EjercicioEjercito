@@ -21,7 +21,7 @@ namespace EjercicioEjercito
             Console.WriteLine("Pulsa 1 Si quieres agregar un nuevo elemento \n" +
                 "Pulsa 2 Si quieres listar todos los elementos \n \n");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Si Pulsas otro numero se cerrara el programa");
+            Console.WriteLine("Si Pulsas otro numero o tecla se cerrara el programa");
             Console.ForegroundColor = ConsoleColor.White;
         }
         public string EligeTipo()
