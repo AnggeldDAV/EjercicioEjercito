@@ -8,9 +8,11 @@ namespace EjercicioEjercito
 {
     public interface IDefensable
     {
+        //composite
         public IMovimiento SistemaMovimiento { get; set; }
         public IBlindaje SistemaBlindaje { get; set; }
         public IPotenciaFuego SistemaPotencia { get; set; }
+
         public double Velocidad {  get; set; } 
         public double Blindaje { get; set; }
         public double PotenciaFuego { get; set; }
