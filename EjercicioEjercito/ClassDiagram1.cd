@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="EjercicioEjercito.Vehiculos" BaseTypeListCollapsed="true">
-    <Position X="7.5" Y="5" Width="1.5" />
+    <Position X="3" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAEAAAAAAQQACAAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAEAAAAAAQQACAIAAAAEAQAAAAAAAA=</HashCode>
       <FileName>Vehiculos.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EjercicioEjercito.Soldados" BaseTypeListCollapsed="true">
-    <Position X="9.25" Y="5" Width="1.5" />
+    <Position X="4.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAEAAAAAAQQACAAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAEAAAAAAQQACAIAAAAEAQAAAAAAAA=</HashCode>
       <FileName>Soldados.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EjercicioEjercito.Canones" BaseTypeListCollapsed="true">
-    <Position X="11" Y="5" Width="1.5" />
+    <Position X="6.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAEAAAAAAQQACAAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAEAAAAAAQQACAIAAAAEAQAAAAAAAA=</HashCode>
       <FileName>Canones.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EjercicioEjercito.Fabrica01" BaseTypeListCollapsed="true">
-    <Position X="11.75" Y="1" Width="1.5" />
+    <Position X="7.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Fabrica01.cs</FileName>
@@ -33,36 +33,105 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EjercicioEjercito.Ejercito" BaseTypeListCollapsed="true">
-    <Position X="5" Y="4" Width="1.5" />
+    <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAgEAAACAABAAAgAABBAAAAAAAUEoAAAAA=</HashCode>
+      <HashCode>AAoAAAAAAAAgEAAACAABAAQwACBJAAAAEAQUEoAAAAA=</HashCode>
       <FileName>Ejercito.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="EjercicioEjercito.IDefensable">
-    <Position X="9.25" Y="1" Width="1.5" />
+  <Class Name="EjercicioEjercito.SeMueve">
+    <Position X="8.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAAAAAAAAQQACAAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SeMueve.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.NoSeMueve">
+    <Position X="10.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NoSeMueve.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.Dispara">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dispara.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.NoDispara">
+    <Position X="12.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NoDispara.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.NoProtege">
+    <Position X="14.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NoProtege.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EjercicioEjercito.Protege">
+    <Position X="12.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Protege.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="EjercicioEjercito.IDefensable">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAQQACAIAAAAEAQAAAAAAAA=</HashCode>
       <FileName>IDefensable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="EjercicioEjercito.IFactory">
-    <Position X="11.75" Y="2.5" Width="1.5" />
+    <Position X="7.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="EjercicioEjercito.IColeccionable">
-    <Position X="5" Y="1" Width="1.5" />
+    <Position X="2.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAEAAAAAABAAAAAAABAAAAAAAUAgAAAAA=</HashCode>
       <FileName>IColeccionable.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="EjercicioEjercito.IMovimiento">
+    <Position X="9.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMovimiento.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EjercicioEjercito.IPotenciaFuego">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPotenciaFuego.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EjercicioEjercito.IBlindaje">
+    <Position X="13.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IBlindaje.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="EjercicioEjercito.TiposMilitares">
-    <Position X="9.25" Y="3.25" Width="1.5" />
+    <Position X="4.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAACAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TiposMilitares.cs</FileName>

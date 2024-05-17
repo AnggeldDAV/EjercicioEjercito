@@ -16,6 +16,9 @@ namespace EjercicioEjercito
         public decimal TotalGasto { get; set; }
         public int TotalElementos { get; set; } = 0;
         public List<IDefensable> ElementosEjercito { get; set; } = new();
+        public IMovimiento SistemaMovimiento { get; set; }
+        public IBlindaje SistemaBlindaje { get; set; }
+        public IPotenciaFuego SistemaPotencia { get; set; }
         public double Velocidad { get { return VelocidadTotal(); } set { } }
         public double Blindaje { get { return BlindajeTotal(); } set { } }
         public double PotenciaFuego { get { return PotenciaFuegoTotal(); } set { } }
