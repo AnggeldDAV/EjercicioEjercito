@@ -25,7 +25,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="EjercicioEjercito.Fabrica01" BaseTypeListCollapsed="true">
-    <Position X="7.25" Y="1.25" Width="1.5" />
+    <Position X="7.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Fabrica01.cs</FileName>
@@ -96,7 +96,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="EjercicioEjercito.IFactory">
-    <Position X="7.25" Y="2.75" Width="1.5" />
+    <Position X="7.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IFactory.cs</FileName>
