@@ -10,6 +10,7 @@ namespace EjercicioEjercito
     {
         public IFactory Fabrica = new Fabrica01();
         public IColeccionable Ejer = new Ejercito();
+        public IColeccionable ConjEjer = new Ejercito();
         public IDefensable Elemento;
         public string Tipo;
         public double Velocidad;
@@ -19,7 +20,9 @@ namespace EjercicioEjercito
         public void DameMensajes()
         {
             Console.WriteLine("Pulsa 1 Si quieres agregar un nuevo elemento \n" +
-                "Pulsa 2 Si quieres listar todos los elementos \n \n");
+                "Pulsa 2 Si quieres listar todos los elementos \n" +
+                "Pulsa 3 Si quieres crear un peloton (Conjunto de ejercitos)\n" +
+                "Pulsa 4 Si quieres listar los atributos de los ejercitos\n \n");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Si Pulsas otro numero o tecla se cerrara el programa");
             Console.ForegroundColor = ConsoleColor.White;
@@ -126,6 +129,17 @@ namespace EjercicioEjercito
             Console.WriteLine($"Total elementos: {Ejer.TotalElementos}, Potencia de fuego total: {Ejer.PotenciaFuegoTotal()}, Blindaje total: {Ejer.BlindajeTotal()}, Capacidad de movimiento: {Ejer.VelocidadTotal()}, Gastos: {Ejer.GastoTotal()}, Capacidad Militar: {Ejer.CapacidadMilitarTotal()}\n");
             Console.ForegroundColor = ConsoleColor.White;
         }
+        public void CreaPeloton()
+        {
+            ConjEjer.Add((IDefensable)Ejer);
+        }
+        public void ListaEjercito()
+        {
+            IDefensable Peloton = (IDefensable)ConjEjer;
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"Numero de ejercitos: {ConjEjer.TotalElementos}, Potencia de fuego total: {Peloton.PotenciaFuego}, Blindaje total: {Peloton.Blindaje}, Capacidad de movimiento: {Peloton.Velocidad}, Gastos: {Peloton.Precio}, Capacidad Militar: {Peloton.CapacidadMilitar()}\n");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
         public void DameMenu()
         {
             int Opcion;
@@ -133,7 +147,7 @@ namespace EjercicioEjercito
             var validador = Int32.TryParse(Console.ReadLine(), out Opcion);
             if (validador)
             {
-                while (Opcion == 1 | Opcion == 2)
+                while (Opcion == 1 | Opcion == 2 | Opcion == 3 | Opcion == 4)
                 {
                     switch (Opcion)
                     {
@@ -147,7 +161,18 @@ namespace EjercicioEjercito
                             Console.WriteLine("Elegiste la opcion 2\n");
                             ListaElementos();
                             break;
-                   }
+                        case 3:
+                            Console.Clear();
+                            Console.WriteLine("Elegiste la opcion 3");
+                            CreaPeloton();
+                            Console.WriteLine("Has creado un Peloton\n");
+                            break;
+                        case 4:
+                            Console.Clear();
+                            Console.WriteLine("Elegiste la opcion 4\n");
+                            ListaEjercito();
+                            break;
+                    }
                     DameMensajes();
                     Int32.TryParse(Console.ReadLine(), out Opcion);
                 }

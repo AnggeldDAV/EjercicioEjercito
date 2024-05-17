@@ -7,15 +7,20 @@ using System.Threading.Tasks;
 namespace EjercicioEjercito
 {
     
-    public class Ejercito : IColeccionable
+    public class Ejercito : IColeccionable, IDefensable
     {
-        public double TotalBlindaje { get; set; } = 0;
-        public double TotalCapacidadMilitar { get; set; } = 0;
-        public double TotalPotenciaFuego { get; set; } = 0;
-        public double TotalVelocidad {  get; set; } = 0;
-        public decimal TotalGasto { get; set; } = 0;
+        public double TotalBlindaje { get; set; }
+        public double TotalCapacidadMilitar { get; set; }
+        public double TotalPotenciaFuego { get; set; }
+        public double TotalVelocidad {  get; set; } 
+        public decimal TotalGasto { get; set; }
         public int TotalElementos { get; set; } = 0;
         public List<IDefensable> ElementosEjercito { get; set; } = new();
+        public double Velocidad { get { return VelocidadTotal(); } set { } }
+        public double Blindaje { get { return BlindajeTotal(); } set { } }
+        public double PotenciaFuego { get { return PotenciaFuegoTotal(); } set { } }
+        public decimal Precio { get { return GastoTotal(); } set { } }
+
         public void Add(IDefensable elemento)
         {
             this.ElementosEjercito.Add(elemento);
@@ -24,6 +29,7 @@ namespace EjercicioEjercito
 
         public double BlindajeTotal()
         {
+            TotalBlindaje = 0;
             foreach(IDefensable obj in ElementosEjercito)
             {
                 TotalBlindaje += obj.Blindaje;
@@ -33,6 +39,7 @@ namespace EjercicioEjercito
 
         public double CapacidadMilitarTotal()
         {
+            TotalCapacidadMilitar = 0;
             foreach (IDefensable obj in ElementosEjercito)
             {
                 TotalCapacidadMilitar += obj.CapacidadMilitar();
@@ -41,6 +48,7 @@ namespace EjercicioEjercito
         }
         public double PotenciaFuegoTotal()
         {
+            TotalPotenciaFuego = 0;
             foreach (IDefensable obj in ElementosEjercito)
             {
                 TotalPotenciaFuego += obj.PotenciaFuego;
@@ -50,6 +58,7 @@ namespace EjercicioEjercito
 
         public decimal GastoTotal()
         {
+            TotalGasto = 0;
             foreach (IDefensable obj in ElementosEjercito)
             {
                 TotalGasto += obj.Precio;
@@ -59,11 +68,17 @@ namespace EjercicioEjercito
 
         public double VelocidadTotal()
         {
+            TotalVelocidad = 0;
             foreach (IDefensable obj in ElementosEjercito)
             {
                 TotalVelocidad += obj.Velocidad;
             }
             return TotalVelocidad;
+        }
+
+        public double CapacidadMilitar()
+        {
+            return ((this.PotenciaFuego * this.Velocidad) / 2) / (100 - this.Blindaje);
         }
     }
 }
