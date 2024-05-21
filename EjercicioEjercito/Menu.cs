@@ -9,7 +9,7 @@ namespace EjercicioEjercito
     public class Menu : IMenu
     {
         public IFactory Fabrica = new Fabrica01();
-        public IColeccionable Ejer = new Ejercito();
+        public Ejercito Ejer = new Ejercito();
         public IColeccionable ConjEjer = new Ejercito();
         public IDefensable Elemento;
         public string Tipo;

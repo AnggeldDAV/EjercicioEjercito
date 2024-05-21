@@ -10,10 +10,5 @@ namespace EjercicioEjercito
     {
         public int TotalElementos { get; set; }
         public void Add(IDefensable elemento);
-        public double PotenciaFuegoTotal();
-        public double BlindajeTotal();
-        public double VelocidadTotal();
-        public decimal GastoTotal();
-        public double CapacidadMilitarTotal();
     }
 }
